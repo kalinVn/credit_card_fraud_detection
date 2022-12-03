@@ -8,8 +8,6 @@ from sklearn.metrics import accuracy_score
 from factory.Classifier import Classifier
 
 
-
-
 class CardDetection:
 
     def __init__(self):
@@ -32,6 +30,9 @@ class CardDetection:
         self.classifier_factory = Classifier()
         self.model = self.classifier_factory.get_model()
         print(self.model)
+
+    def get_dataset(self):
+        return self.dataset
 
     def standardize_data(self):
         self.legit = self.dataset[self.dataset.Class == 0]
