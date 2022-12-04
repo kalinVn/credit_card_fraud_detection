@@ -19,7 +19,7 @@ def card_fraud_detection():
     service.predict(data)
     df = service.get_dataset()
     params_line_plot = dict(x='Time', y='Amount', data=df, ci=None, lw=2, color='#aa00aa', alpha=0.6)
-    params_hist_plot = dict( data=df, color='red', stat='frequency', bins=4)
+    params_hist_plot = dict(x='Time', data=df, color='red')
     params_scatter_plot = dict(x='Time', y='Amount', data=df)
     # line_plot(df, params_line_plot)
     # scatter_plot(df, params_scatter_plot)
